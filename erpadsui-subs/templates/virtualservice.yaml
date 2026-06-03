@@ -1,0 +1,19 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: {{ .Values.virtualService.name }}
+  namespace: {{ .Values.namespace }}
+spec:
+  hosts: 
+  - {{ .Values.virtualService.hosts }}
+  gateways:
+  - istio-ingress/erpadsui-gateway
+  http:
+  - match:
+    - uri:
+        prefix: /
+    route:
+    - destination:
+        port:
+          number: {{ .Values.virtualService.port }}
+        host: {{ .Values.virtualService.name }}
