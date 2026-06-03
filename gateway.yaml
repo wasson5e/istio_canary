@@ -1,0 +1,15 @@
+apiVersion: networking.istio.io/v1
+kind: Gateway
+metadata:
+  name: canary-ingress
+  namespace: default
+spec:
+  selector:
+    app: istio-canary
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - "adssubs.corp.chartercom.com"
