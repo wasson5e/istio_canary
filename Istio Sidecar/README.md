@@ -28,3 +28,4 @@ This will install the Istio 1.30.1 profile "default" into the cluster. Proceed? 
 ```
 
 ## Create the Helm Charts
+`helm create canary`
