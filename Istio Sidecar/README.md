@@ -1,4 +1,4 @@
-# Istio Sidecar Canary
+# Istio Sidecar Canary Deployments
 
 ## Install Sidecar mode
 ```code
