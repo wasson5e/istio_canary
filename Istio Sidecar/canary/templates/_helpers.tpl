@@ -60,9 +60,6 @@ Selector labels
 {{- define "canary.selectorLabels" -}}
 app.kubernetes.io/name: {{ include "canary.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
-{{- if .Values.canary }}
-version: v1
-{{- end }}
 {{- end }}
 
 {{/*
